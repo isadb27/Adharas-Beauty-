@@ -1,5 +1,5 @@
 # Adharas-Beauty- 
-<h2> Adharas-Beauty/
+<h1> Adharas-Beauty/
 ├── node_modules/               # Dependencias del proyecto
 ├── dist/                       # Archivos de distribución
 ├── public/                     
@@ -60,4 +60,4 @@
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
-</h2>
+</h1>
