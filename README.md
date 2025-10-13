@@ -93,7 +93,7 @@ CREATE COMPONENT	Creación de un nuevo componente
 
 🚀 Tecnologías Usadas
 TypeScript
-
+REACT
 HTML / CSS
 
 Web Components
