@@ -25,49 +25,49 @@ Adharas-beauty/
 ├── src/
 │   ├── assets/                 # Recursos (fuentes, imágenes locales)
 │   ├── components/             # Componentes UI reutilizables
-│   │   ├── Navbar.ts
-│   │   ├── Footer.ts
-│   │   ├── ProductCard.ts
-│   │   ├── ProductFilter.ts
-│   │   ├── ProductCarousel.ts
-│   │   ├── Banner.ts
-│   │   ├── MembershipCard.ts
-│   │   ├── LoginForm.ts
-│   │   └── SignupForm.ts
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductFilter.tsx
+│   │   ├── ProductCarousel.tsx
+│   │   ├── Banner.tsx
+│   │   ├── MembershipCard.tsx
+│   │   ├── LoginForm.tsx
+│   │   └── SignupForm.tsx
 │   │
 │   ├── layouts/                # Layouts principales
 │   │   ├── MainLayout.ts
 │   │   └── AuthLayout.ts
 │   │
 │   ├── pages/                  # Vistas del e-commerce
-│   │   ├── Home.ts
-│   │   ├── Category.ts        # (ej: lips, skincare, etc.)
-│   │   ├── ProductDetail.ts
-│   │   ├── Cart.ts
-│   │   ├── Membership.ts
-│   │   ├── Login.ts
-│   │   └── Signup.ts
+│   │   ├── Home.tsx
+│   │   ├── Category.tsx        # (ej: lips, skincare, etc.)
+│   │   ├── ProductDetail.tsx
+│   │   ├── Cart.tsx
+│   │   ├── Membership.tsx
+│   │   ├── Login.tsx
+│   │   └── Signup.tsx
 │   │
 │   ├── services/               # Conexión a API o datos fake
-│   │   ├── ProductService.ts
-│   │   └── AuthService.ts
+│   │   ├── ProductService.tsx
+│   │   └── AuthService.tsx
 │   │
 │   ├── store/                  # Estado global (ej: carrito, usuario)
-│   │   ├── cartSlice.ts
-│   │   ├── userSlice.ts
-│   │   └── index.ts
+│   │   ├── cartSlice.tsx
+│   │   ├── userSlice.tsx
+│   │   └── index.tsx
 │   │
 │   ├── styles/                 # Estilos globales o módulos CSS
 │   │   └── globals.css
 │   │
 │   ├── utils/                  # Funciones helper
-│   │   └── formatPrice.ts      # Calcular descuentos y membresías
-│   │   ├── applyDiscount.ts    # Funciones para manejar carrito (subtotal, total, etc.)
-│   │   ├── cartHelpers.ts       # Validar emails en registro/login   
-│   │   └── validateEmail.ts       
+│   │   └── formatPrice.tsx      # Calcular descuentos y membresías
+│   │   ├── applyDiscount.tsx    # Funciones para manejar carrito (subtotal, total, etc.)
+│   │   ├── cartHelpers.tsx       # Validar emails en registro/login   
+│   │   └── validateEmail.tsx       
 │   └── types/                  # Definiciones de tipos TS
-│       ├── product.ts
-│       └── user.ts
+│       ├── product.tsx
+│       └── user.tsx
 │
 ├── .gitignore
 ├── eslint.config.js
