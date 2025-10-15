@@ -95,6 +95,7 @@ CREATE COMPONENT	Creación de un nuevo componente
 TypeScript
 REACT
 HTML / CSS
+TAILWIND
 
 Web Components
 
