@@ -1,13 +1,17 @@
-import './App.css'
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import ProductGrid from "./components/ProductGrid";
+import Footer from "./components/Footer";
 
-function App() {
-
-
+export default function App() {
   return (
     <>
-    <h1 className='bg-blue-500  sm:bg-red-500 hover:bg-yellow-100'>Hola Tailwind!</h1>
-    </>
-  )
-}
+      <Navbar />
+      <Banner />
+      <ProductGrid />
+      <Footer />
 
-export default App
+      
+    </>
+  );
+}
