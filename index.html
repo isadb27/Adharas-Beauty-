@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adharas Beauty — Brilla a tu manera</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Adharas Beauty — Inicio">
+        <img src="/adharas-logo.jpg" alt="Adharas Beauty" class="brand-mark" />
+        <span class="sr-only">Adharas Beauty</span>
+      </a>
+
+      <form class="search" role="search">
+        <input type="search" placeholder="Buscar productos, tonos, colecciones…" aria-label="Buscar" />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <div class="actions">
+        <a href="#" class="icon-btn" aria-label="Iniciar sesión">👤</a>
+        <a href="#" class="icon-btn cart" aria-label="Carrito">
+          🛒<span class="badge" id="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categorías -->
+  <nav class="categories" aria-label="Categorías">
+    <div class="container">
+      <a href="#">Piel</a>
+      <a href="#">Ojos</a>
+      <a href="#">Labios</a>
+      <a href="#">Brochas</a>
+      <a href="#">Cejas</a>
+      <a href="#">Cuidado capilar</a>
+      <a href="#">Accesorios</a>
+      <a href="#">Corporal</a>
+    </div>
+  </nav>
+
+  <!-- Banner superior -->
+  <section class="strip">
+    <div class="container">
+      <p><strong>NEW COLLECTION:</strong> Glow Diva 2025 — edición limitada ✨</p>
+    </div>
+  </section>
+
+  <!-- Hero centrada -->
+  <section class="hero" aria-label="Promociones destacadas">
+    <div class="container">
+      <div class="carousel">
+        <div class="slide s1">
+          <div class="slide-inner">
+            <h2>Shine Brighter: Discover Our New Collection</h2>
+            <p>Base ligera + fijador 24h. Piel real, look profesional.</p>
+            <a class="btn btn-light" href="#">Ver colección</a>
+          </div>
+        </div>
+        <div class="slide s2">
+          <div class="slide-inner">
+            <h2>Labios que hablan</h2>
+            <p>HydraShine Gloss con ácido hialurónico.</p>
+            <a class="btn btn-light" href="#">Comprar gloss</a>
+          </div>
+        </div>
+        <div class="slide s3">
+          <div class="slide-inner">
+            <h2>Ojos de impacto</h2>
+            <p>Paletas de 12 tonos mate + shimmer.</p>
+            <a class="btn btn-light" href="#">Paletas</a>
+          </div>
+        </div>
+        <!-- Duplicadas para loop suave -->
+        <div class="slide s1"></div>
+        <div class="slide s2"></div>
+        <div class="slide s3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Best Sellers -->
+  <section class="promos" aria-labelledby="promos-title">
+    <div class="container">
+      <div class="section-head">
+        <h3 id="promos-title">Our Best Sellers</h3>
+      </div>
+
+      <div class="promo-scroller">
+        <!-- Ejemplos con tus PNG (usa los tuyos; puedes duplicar estos artículos) -->
+        <article class="card product"
+                 data-sku="GB-30"
+                 data-name="Glow Base 30ml"
+                 data-price="79900"
+                 data-image="/Rectangle%2056.png">
+          <a href="product.html" class="media" aria-label="Glow Base 30ml">
+            <img src="/Rectangle%2056.png" alt="Glow Base 30ml" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Glow Base 30ml</h4>
+            <p class="price">$79.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="HG-01"
+                 data-name="HydraShine Gloss"
+                 data-price="39900"
+                 data-image="/Rectangle%2056-1.png">
+          <a href="product.html" class="media" aria-label="HydraShine Gloss">
+            <img src="/Rectangle%2056-1.png" alt="HydraShine Gloss" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">HydraShine Gloss</h4>
+            <p class="price">$39.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="PD-12"
+                 data-name="Paleta 12 tonos Diva"
+                 data-price="99900"
+                 data-image="/Rectangle%2056-2.png">
+          <a href="product.html" class="media" aria-label="Paleta 12 tonos Diva">
+            <img src="/Rectangle%2056-2.png" alt="Paleta 12 tonos Diva" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Paleta 12 tonos Diva</h4>
+            <p class="price">$99.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="EL-UB"
+                 data-name="Delineador UltraBlack"
+                 data-price="29900"
+                 data-image="/Rectangle%2056-3.png">
+          <a href="product.html" class="media" aria-label="Delineador UltraBlack">
+            <img src="/Rectangle%2056-3.png" alt="Delineador UltraBlack" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Delineador UltraBlack</h4>
+            <p class="price">$29.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="SB-08"
+                 data-name="Set Brochas Pro (8)"
+                 data-price="119900"
+                 data-image="/Rectangle%2056-4.png">
+          <a href="product.html" class="media" aria-label="Set Brochas Pro 8pzs">
+            <img src="/Rectangle%2056-4.png" alt="Set Brochas Pro 8pzs" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Set Brochas Pro (8)</h4>
+            <p class="price">$119.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="FM-24"
+                 data-name="Fix Mist 24h"
+                 data-price="49900"
+                 data-image="/Rectangle%2056-5.png">
+          <a href="product.html" class="media" aria-label="Fix Mist 24h">
+            <img src="/Rectangle%2056-5.png" alt="Fix Mist 24h" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Fix Mist 24h</h4>
+            <p class="price">$49.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOS BANNERS -->
+  <section class="banners">
+    <div class="container">
+      <figure class="banner">
+        <img src="/aboutus.png" alt="About us — Adharas Beauty" />
+      </figure>
+      <figure class="banner">
+        <img src="/mundocomments.png" alt="Over 5,000,000 sales worldwide — Adharas Beauty" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- Our New Favorites -->
+  <section class="catalog" aria-labelledby="catalog-title">
+    <div class="container">
+      <div class="section-head">
+        <h3 id="catalog-title">Our New Favorites</h3>
+      </div>
+
+      <div class="grid">
+        <article class="card product"
+                 data-sku="RB-SP"
+                 data-name="Rubor Silk Pink"
+                 data-price="34900"
+                 data-image="/Rectangle%2064.png">
+          <a href="product.html" class="media">
+            <img src="/Rectangle%2064.png" alt="Rubor Silk Pink" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Rubor Silk Pink</h4>
+            <p class="price">$34.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="IL-SL"
+                 data-name="Iluminador Star Light"
+                 data-price="54900"
+                 data-image="/Rectangle%2065.png">
+          <a href="product.html" class="media">
+            <img src="/Rectangle%2065.png" alt="Iluminador Star Light" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Iluminador Star Light</h4>
+            <p class="price">$54.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="LM-IC"
+                 data-name="Labial Matte Icon"
+                 data-price="32900"
+                 data-image="/Rectangle%2066.png">
+          <a href="product.html" class="media">
+            <img src="/Rectangle%2066.png" alt="Labial Matte Icon" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Labial Matte Icon</h4>
+            <p class="price">$32.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card product"
+                 data-sku="GL-NK"
+                 data-name="Gloss Nude Kiss"
+                 data-price="35900"
+                 data-image="/Rectangle%2067.png">
+          <a href="product.html" class="media">
+            <img src="/Rectangle%2067.png" alt="Gloss Nude Kiss" loading="lazy">
+          </a>
+          <div class="info">
+            <h4 class="name">Gloss Nude Kiss</h4>
+            <p class="price">$35.900</p>
+            <div class="cta">
+              <button class="btn btn-primary add-to-cart">Añadir</button>
+              <a class="btn btn-ghost" href="product.html">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplica más items con tus otras Rectangle XX.png -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <h4>Adharas Beauty</h4>
+          <p>“The star who glows the most”</p>
+          <img src="/logofinal.png" alt="Adharas — Customer Service" class="footer-mark" />
+        </div>
+        <div>
+          <h5>Customer Services</h5>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Help &amp; Q&amp;A</a></li>
+            <li><a href="#">Paying Methods</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Gift Cards Balance</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Síguenos</h5>
+          <p>Instagram • TikTok • Pinterest</p>
+        </div>
+      </div>
+      <p class="legal">© 2025 Adharas Beauty</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>

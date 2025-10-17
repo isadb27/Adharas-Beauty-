@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HydraShine Gloss — Adharas Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Volver a inicio">
+        <img src="/adharas-logo.jpg" alt="Adharas Beauty" class="brand-mark" />
+        <span class="sr-only">Adharas Beauty</span>
+      </a>
+
+      <form class="search" role="search">
+        <input type="search" placeholder="Buscar…" aria-label="Buscar" />
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <div class="actions">
+        <a href="#" class="icon-btn">👤</a>
+        <a href="#" class="icon-btn cart">🛒<span class="badge" id="cart-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <div class="container">
+      <a class="back" href="index.html">← Volver</a>
+
+      <div class="product-layout">
+        <div class="product-gallery card">
+          <img src="/Rectangle%2056-1.png" alt="HydraShine Gloss" />
+        </div>
+
+        <div class="product-details"
+             id="product-detail"
+             data-sku="HG-01"
+             data-name="HydraShine Gloss"
+             data-price="39900"
+             data-image="/Rectangle%2056-1.png">
+          <h1>HydraShine Gloss</h1>
+          <p class="subtitle">Brillo espejo con ácido hialurónico</p>
+
+          <div class="price-row">
+            <span class="price">$39.900</span>
+            <span class="pill">Envío 24–48h</span>
+          </div>
+
+          <p class="desc">
+            Textura ligera, no pegajosa, realza el volumen de tus labios y aporta hidratación prolongada.
+            Apto para piel sensible. Cruelty-free.
+          </p>
+
+          <div class="options">
+            <label>Tono:</label>
+            <div class="swatches">
+              <button class="swatch" aria-label="Crystal" style="--tone:#f5d5df"></button>
+              <button class="swatch" aria-label="Rose" style="--tone:#ed5a87"></button>
+              <button class="swatch" aria-label="Plum" style="--tone:#7a1b45"></button>
+            </div>
+          </div>
+
+          <div class="buy-row">
+            <button class="btn btn-primary add-to-cart">Añadir al carrito</button>
+            <button class="btn btn-strong buy-now">¡Llévalo!</button>
+          </div>
+
+          <ul class="ticks">
+            <li>Pago seguro</li>
+            <li>Devoluciones simples</li>
+            <li>Soporte 24/7</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="related">
+        <h3>Podría interesarte</h3>
+        <div class="grid">
+          <article class="card product"
+                   data-sku="IL-SL"
+                   data-name="Iluminador Star Light"
+                   data-price="54900"
+                   data-image="/Rectangle%2065.png">
+            <a href="#" class="media">
+              <img src="/Rectangle%2065.png" alt="Iluminador Star Light">
+            </a>
+            <div class="info">
+              <h4 class="name">Iluminador Star Light</h4>
+              <p class="price">$54.900</p>
+              <div class="cta">
+                <button class="btn btn-primary add-to-cart">Añadir</button>
+                <a class="btn btn-ghost" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product"
+                   data-sku="RB-SP"
+                   data-name="Rubor Silk Pink"
+                   data-price="34900"
+                   data-image="/Rectangle%2064.png">
+            <a href="#" class="media">
+              <img src="/Rectangle%2064.png" alt="Rubor Silk Pink">
+            </a>
+            <div class="info">
+              <h4 class="name">Rubor Silk Pink</h4>
+              <p class="price">$34.900</p>
+              <div class="cta">
+                <button class="btn btn-primary add-to-cart">Añadir</button>
+                <a class="btn btn-ghost" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card product"
+                   data-sku="LM-IC"
+                   data-name="Labial Matte Icon"
+                   data-price="32900"
+                   data-image="/Rectangle%2066.png">
+            <a href="#" class="media">
+              <img src="/Rectangle%2066.png" alt="Labial Matte Icon">
+            </a>
+            <div class="info">
+              <h4 class="name">Labial Matte Icon</h4>
+              <p class="price">$32.900</p>
+              <div class="cta">
+                <button class="btn btn-primary add-to-cart">Añadir</button>
+                <a class="btn btn-ghost" href="#">Ver</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="legal">© 2025 Adharas Beauty</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
