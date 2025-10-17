@@ -8,27 +8,23 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-black text-white select-none">
-      {/* === Primera fila === */}
       <div className="flex justify-between items-center px-6 py-3 relative">
-        {/* Idioma */}
         <div className="text-sm">United States | English</div>
 
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="Adhara's Beauty"
-          className="h-8 object-contain cursor-pointer"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Adhara's Beauty"
+            className="h-8 object-contain cursor-pointer"
+          />
+        </Link>
 
-        {/* Iconos */}
         <div className="flex items-center gap-5 text-xl relative">
-          {/* === Buscador === */}
           <div className="relative flex items-center justify-center">
             <FaSearch
               className="cursor-pointer hover:text-pink-400 transition"
               onClick={() => setShowSearch(!showSearch)}
             />
-
             {showSearch && (
               <div className="absolute bottom-6 right-[0] transform translate-y-[27px] bg-white text-black rounded-full flex items-center px-3 py-1 shadow-lg animate-fadeIn">
                 <input
@@ -47,7 +43,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* === Segunda fila: Categorías === */}
       <nav className="border-t border-gray-800">
         <ul className="flex justify-between max-w-3xl mx-auto px-6 py-3 text-lg">
           {[
@@ -58,7 +53,10 @@ export default function Navbar() {
             { name: "Skincare", path: "/skincare" },
             { name: "Hair", path: "/hair" },
           ].map((cat) => (
-            <li key={cat.name} className="cursor-pointer hover:text-pink-400 transition">
+            <li
+              key={cat.name}
+              className="cursor-pointer hover:text-pink-400 transition"
+            >
               <Link to={cat.path}>{cat.name}</Link>
             </li>
           ))}
@@ -67,45 +65,3 @@ export default function Navbar() {
     </header>
   );
 }
-✅ Qué cambió
-Importado Link de react-router-dom para navegación interna.
-
-Cada categoría ahora tiene una path (/eyes, /brows, etc.).
-
-Se mantiene todo tu diseño original:
-
-Misma animación del buscador
-
-Misma estructura y estilos
-
-Hover rosa en texto
-
-⚙️ Próximo paso (solo una vez)
-En tu App.tsx, debes envolver toda tu app con BrowserRouter y crear las rutas para cada categoría, por ejemplo:
-
-tsx
-Copiar código
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ProductGrid from "./components/ProductGrid";
-import EyesPage from "./pages/EyesPage";
-import BrowsPage from "./pages/BrowsPage";
-// ... y así para las demás
-
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ProductGrid />} />
-        <Route path="/eyes" element={<EyesPage />} />
-        <Route path="/brows" element={<BrowsPage />} />
-        {/* demás rutas */}
-      </Routes>
-      <Footer />
-    </Router>
-  );
-}
-
-export default App;

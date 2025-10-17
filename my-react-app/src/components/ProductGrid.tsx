@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { products } from "../data/products";
 import { Star, Heart } from "lucide-react";
 
-const ProductGrid: React.FC = () => {
-  // Estado para calificaciones
-  const [ratings, setRatings] = useState<{ [key: number]: number }>({});
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
 
-  // Estado para favoritos
+interface ProductGridProps {
+  products: Product[];
+}
+
+const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
+  const [ratings, setRatings] = useState<{ [key: number]: number }>({});
   const [favorites, setFavorites] = useState<{ [key: number]: boolean }>({});
 
-  // Cargar datos guardados
   useEffect(() => {
     const savedRatings = localStorage.getItem("productRatings");
     const savedFavorites = localStorage.getItem("productFavorites");
@@ -18,23 +24,18 @@ const ProductGrid: React.FC = () => {
     if (savedFavorites) setFavorites(JSON.parse(savedFavorites));
   }, []);
 
-  // Guardar ratings
   useEffect(() => {
     localStorage.setItem("productRatings", JSON.stringify(ratings));
   }, [ratings]);
 
-  // Guardar favoritos
   useEffect(() => {
     localStorage.setItem("productFavorites", JSON.stringify(favorites));
   }, [favorites]);
 
-  // Cambiar rating
   const handleRating = (productId: number, value: number) => {
-    const updatedRatings = { ...ratings, [productId]: value };
-    setRatings(updatedRatings);
+    setRatings((prev) => ({ ...prev, [productId]: value }));
   };
 
-  // Alternar favoritos
   const toggleFavorite = (productId: number) => {
     setFavorites((prev) => ({
       ...prev,
@@ -54,7 +55,6 @@ const ProductGrid: React.FC = () => {
             key={product.id}
             className="bg-zinc-900 rounded-lg shadow-md hover:shadow-pink-500/20 transition p-4 text-center relative"
           >
-            {/* Corazón favorito */}
             <button
               onClick={() => toggleFavorite(product.id)}
               className="absolute top-3 right-3 focus:outline-none"
@@ -68,18 +68,15 @@ const ProductGrid: React.FC = () => {
               />
             </button>
 
-            {/* Imagen del producto */}
             <img
               src={product.image}
               alt={product.name}
               className="w-full h-40 object-cover rounded-md mb-4"
             />
 
-            {/* Nombre y precio */}
             <h3 className="text-lg font-semibold">{product.name}</h3>
             <p className="text-pink-400 font-medium">{product.price}</p>
 
-            {/* Estrellas clicables */}
             <div className="flex justify-center mt-2">
               {[...Array(5)].map((_, index) => {
                 const value = index + 1;
