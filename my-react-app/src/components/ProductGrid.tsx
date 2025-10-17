@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Star, Heart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -15,6 +16,7 @@ interface ProductGridProps {
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   const [ratings, setRatings] = useState<{ [key: number]: number }>({});
   const [favorites, setFavorites] = useState<{ [key: number]: boolean }>({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedRatings = localStorage.getItem("productRatings");
@@ -43,6 +45,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
     }));
   };
 
+  const handleProductClick = (product: Product) => {
+    navigate(`/product/${product.id}`, { state: { product } });
+  };
+
   return (
     <section className="py-12 px-8 bg-black text-white">
       <h2 className="text-3xl font-bold mb-8 text-center text-pink-400">
@@ -53,10 +59,14 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-zinc-900 rounded-lg shadow-md hover:shadow-pink-500/20 transition p-4 text-center relative"
+            className="bg-zinc-900 rounded-lg shadow-md hover:shadow-pink-500/20 transition p-4 text-center relative cursor-pointer"
+            onClick={() => handleProductClick(product)}
           >
             <button
-              onClick={() => toggleFavorite(product.id)}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleFavorite(product.id);
+              }}
               className="absolute top-3 right-3 focus:outline-none"
             >
               <Heart
@@ -77,7 +87,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
             <h3 className="text-lg font-semibold">{product.name}</h3>
             <p className="text-pink-400 font-medium">{product.price}</p>
 
-            <div className="flex justify-center mt-2">
+            <div
+              className="flex justify-center mt-2"
+              onClick={(e) => e.stopPropagation()}
+            >
               {[...Array(5)].map((_, index) => {
                 const value = index + 1;
                 return (

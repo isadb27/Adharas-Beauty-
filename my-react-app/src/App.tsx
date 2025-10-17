@@ -5,12 +5,12 @@ import Brows from "./pages/Brows";
 import Face from "./pages/Face";
 import Hair from "./pages/Hair";
 import Skincare from "./pages/Skincare";
+import ProductDetail from "./pages/ProductDetail"; 
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        {/* Si no hay ruta, renderiza Lips */}
         <Route path="*" element={<Lips />} />
         <Route path="/lips" element={<Lips />} />
         <Route path="/eyes" element={<Eyes />} />
@@ -18,6 +18,7 @@ export default function App() {
         <Route path="/face" element={<Face />} />
         <Route path="/hair" element={<Hair />} />
         <Route path="/skincare" element={<Skincare />} />
+         <Route path="/product/:id" element={<ProductDetail />} /> 
       </Routes>
     </Router>
   );
