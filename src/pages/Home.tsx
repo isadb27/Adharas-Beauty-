@@ -1,24 +1,21 @@
-import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
 import { PRODUCTS } from "../data/products";
 
 export default function Home() {
   return (
     <>
-      <Header />
-
-      {/* Categorías */}
-      <nav className="pt-2">
+      {/* Categories */}
+      <nav id="categories" className="pt-2">
         <div className="container mx-auto flex flex-wrap gap-2 px-4">
           {[
-            "Piel",
-            "Ojos",
-            "Labios",
-            "Brochas",
-            "Cejas",
-            "Cuidado capilar",
-            "Accesorios",
-            "Corporal",
+            "Skin",
+            "Eyes",
+            "Lips",
+            "Brushes",
+            "Brows",
+            "Hair care",
+            "Accessories",
+            "Body",
           ].map((c) => (
             <span
               key={c}
@@ -30,14 +27,14 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Strip */}
+      {/* Announcement */}
       <section className="my-3">
         <div className="container mx-auto rounded-full border border-[#ED5A87]/40 bg-[rgba(237,90,135,.2)] px-4 py-3 text-center font-semibold text-pink-100">
-          <strong>NEW COLLECTION:</strong> Glow Diva 2025 — edición limitada ✨
+          <strong>NEW COLLECTION:</strong> Glow Diva 2025 — limited edition ✨
         </div>
       </section>
 
-      {/* Hero carrusel (más lento: 60s) */}
+      {/* Hero carousel */}
       <section className="my-4 relative z-0">
         <div className="container mx-auto overflow-hidden rounded-[18px] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,.35)]">
           <div className="flex w-[600%] animate-[slide_60s_linear_infinite]">
@@ -59,10 +56,10 @@ export default function Home() {
                     Shine Brighter
                   </h2>
                   <p className="mb-3 text-pink-100">
-                    Base ligera + fijador 24h.
+                    Ultra-light foundation + 24h setting spray.
                   </p>
-                  <a className="rounded-full bg-white px-4 py-3 font-semibold text-black">
-                    Ver colección
+                  <a className="rounded-full bg-white px-4 py-3 font-semibold text-black cursor-pointer">
+                    View collection
                   </a>
                 </div>
               </div>
@@ -72,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Best Sellers */}
-      <section className="py-3">
+      <section id="weekly" className="py-3">
         <div className="container mx-auto px-4">
           <h3 className="mb-2 text-center text-2xl font-bold text-white">
             Our Best Sellers
@@ -85,19 +82,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dos banners */}
-      <section className="py-3">
+      {/* Two banners */}
+      <section id="banners" className="py-3">
         <div className="container mx-auto grid gap-4 px-4">
           <figure className="overflow-hidden rounded-[18px] border border-white/10 bg-[#0f0f12] shadow-[0_10px_30px_rgba(0,0,0,.35)]">
-            <img src="/aboutus.png" alt="About us" className="w-full object-cover" />
+            <img
+              src="/aboutus.png"
+              alt="About us"
+              className="w-full object-cover"
+            />
           </figure>
           <figure className="overflow-hidden rounded-[18px] border border-white/10 bg-[#0f0f12] shadow-[0_10px_30px_rgba(0,0,0,.35)]">
-            <img src="/mundocomments.png" alt="Worldwide comments" className="w-full object-cover" />
+            <img
+              src="/mundocomments.png"
+              alt="Worldwide comments"
+              className="w-full object-cover"
+            />
           </figure>
         </div>
       </section>
 
-      {/* Our New Favorites */}
+      {/* New favorites */}
       <section className="pb-7 pt-2">
         <div className="container mx-auto px-4">
           <h3 className="mb-2 text-center text-2xl font-bold text-white">
@@ -112,7 +117,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-6 text-[#d8cfda]">
+      <footer
+        id="support"
+        className="border-t border-white/10 py-6 text-[#d8cfda]"
+      >
         <div className="container mx-auto px-4">
           <div className="grid gap-4 md:grid-cols-3">
             <div>
@@ -125,20 +133,22 @@ export default function Home() {
               />
             </div>
             <div>
-              <h5 className="mb-2 font-semibold text-white">Customer Services</h5>
+              <h5 className="mb-2 font-semibold text-white">
+                Customer Services
+              </h5>
               <ul className="list-inside list-disc space-y-1 text-pink-100">
-                <li>Shipping Info</li>
+                <li>Shipping info</li>
                 <li>Returns</li>
                 <li>Help &amp; Q&amp;A</li>
-                <li>Paying Methods</li>
-                <li>Gift Cards</li>
-                <li>Gift Cards Balance</li>
-                <li>Terms of Use</li>
+                <li>Payment methods</li>
+                <li>Gift cards</li>
+                <li>Gift cards balance</li>
+                <li>Terms of use</li>
                 <li>Privacy</li>
               </ul>
             </div>
             <div>
-              <h5 className="mb-2 font-semibold text-white">Síguenos</h5>
+              <h5 className="mb-2 font-semibold text-white">Follow us</h5>
               <p>Instagram • TikTok • Pinterest</p>
             </div>
           </div>
